@@ -19,22 +19,28 @@ Dark Mode
 ### Cara Install ke Lokal Development
 1. Clone Repo ini
 2. Install dependency Laravel menggunakan composer :
-   ``
+   ```
    $ composer install
-   ``
-3. Karena menggunakan Breeze, install breeze dependency :
-   ``
+   ```
+3. Copy file ``.env.example`` dan paste lalu rename jadi ``.env``
+4. Buat database pada phpmyadmin anda dengan nama ``website_bem_frs`` 
+5. Lakukan Migrasi Database :
+   ```
+   $ php artisan migrate
+   ```
+6. Karena menggunakan Breeze, install breeze dependency :
+   ```
    $ php artisan breeze:install
-   ``
-4. Install dependency bagian assets :
-   ``
+   ```
+7. Install dependency bagian assets :
+   ```
    $ npm install
-   ``
-5. Jalankan NPM untuk assets nya:
-   ``
+   ```
+8. Jalankan NPM untuk assets nya:
+   ```
    $ npm run dev
-   ``
-6. Jalankan server aplikasi :
-   ``
+   ```
+9.  Jalankan server aplikasi :
+   ```
    $ php artisan serve
-   `` 
+   ```
