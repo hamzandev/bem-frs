@@ -1,5 +1,15 @@
 # Website BEM FRS
 
+### Previews
+
+Light Mode
+
+![Light Mode](./previews/light.png)
+
+Dark Mode
+
+![Dark Mode](./previews/dark.png)
+
 ### Requirement
 1. Web server (Apache, Nginx dll), Mysql. Pakai Xampp / Laragon udah sepaket
 2. Composer
