@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\CustomerResource\Pages;
-use App\Filament\Resources\CustomerResource\RelationManagers;
-use App\Models\Customer;
+use App\Filament\Resources\JurnalResource\Pages;
+use App\Filament\Resources\JurnalResource\RelationManagers;
+use App\Models\Jurnal;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,11 +13,12 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class CustomerResource extends Resource
+class JurnalResource extends Resource
 {
-    protected static ?string $model = Customer::class;
+    protected static ?string $model = Jurnal::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static ?string $navigationLabel = 'Jurnal';
 
     public static function form(Form $form): Form
     {
@@ -56,9 +57,9 @@ class CustomerResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListCustomers::route('/'),
-            'create' => Pages\CreateCustomer::route('/create'),
-            'edit' => Pages\EditCustomer::route('/{record}/edit'),
+            'index' => Pages\ListJurnals::route('/'),
+            'create' => Pages\CreateJurnal::route('/create'),
+            'edit' => Pages\EditJurnal::route('/{record}/edit'),
         ];
     }
 }
