@@ -1,15 +1,5 @@
 # Website BEM FRS
 
-### Previews
-
-Light Mode
-
-![Light Mode](./previews/light.png)
-
-Dark Mode
-
-![Dark Mode](./previews/dark.png)
-
 ### Requirement
 1. Web server (Apache, Nginx dll), Mysql. Pakai Xampp / Laragon udah sepaket
 2. Composer
@@ -23,24 +13,16 @@ Dark Mode
    $ composer install
    ```
 3. Copy file ``.env.example`` dan paste lalu rename jadi ``.env``
-4. Buat database pada phpmyadmin anda dengan nama ``website_bem_frs`` 
+4. Buat database pada phpmyadmin anda dengan nama ``bem_frs`` 
 5. Lakukan Migrasi Database :
-   ```
-   $ php artisan migrate
-   ```
-6. Karena menggunakan Breeze, install breeze dependency :
-   ```
-   $ php artisan breeze:install
-   ```
-7. Install dependency bagian assets :
-   ```
-   $ npm install
-   ```
-8. Jalankan NPM untuk assets nya:
-   ```
-   $ npm run dev
-   ```
-9.  Jalankan server aplikasi :
-   ```
-   $ php artisan serve
-   ```
+    ```
+    $ php artisan migrate
+    ```
+6. Buat User baru untuk Login sebagai Administrator
+    ```
+    $ php artisan make:filament-user
+    ```
+7. Jalankan server aplikasi :
+    ```
+    $ php artisan serve
+    ```
