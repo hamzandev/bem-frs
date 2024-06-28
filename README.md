@@ -1,5 +1,7 @@
 # Website BEM FRS
 
+- Branch Dev : Untuk Development
+
 ### Requirement
 1. Web server (Apache, Nginx dll), Mysql. Pakai Xampp / Laragon udah sepaket
 2. Composer
