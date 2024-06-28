@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ArtikelResource\Pages;
-use App\Filament\Resources\ArtikelResource\RelationManagers;
-use App\Models\Artikel;
+use App\Filament\Resources\BidangResource\Pages;
+use App\Filament\Resources\BidangResource\RelationManagers;
+use App\Models\Bidang;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,17 +13,14 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ArtikelResource extends Resource
+class BidangResource extends Resource
 {
-    protected ?string $heading = 'Custom Page Heading';
-    protected ?string $subheading = 'Custom Page Subheading';
-    protected static ?string $title = 'Custom Page Title';
-    protected static ?string $model = Artikel::class;
+    protected static ?string $model = Bidang::class;
 
-    protected static ?string $navigationGroup = 'Jurnalistik';
+    protected static ?string $navigationGroup = 'Kepengurusan';
 
-    protected static ?string $navigationIcon = 'heroicon-o-folder';
-    protected static ?string $navigationLabel = 'Artikel';
+    protected static ?string $navigationLabel = 'Bidang';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
     {
@@ -62,9 +59,9 @@ class ArtikelResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListArtikels::route('/'),
-            'create' => Pages\CreateArtikel::route('/create'),
-            'edit' => Pages\EditArtikel::route('/{record}/edit'),
+            'index' => Pages\ListBidangs::route('/'),
+            'create' => Pages\CreateBidang::route('/create'),
+            'edit' => Pages\EditBidang::route('/{record}/edit'),
         ];
     }
 }

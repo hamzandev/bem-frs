@@ -16,12 +16,9 @@ return new class extends Migration
             $table->string('nim');
             $table->string('nama');
             $table->enum('gender', ['L', 'P']);
-            $table->string('tanggal_lahir');
-            $table->string('jabatan');
-            $table->string('tahun_kepengurusan');
             $table->string('foto')->nullable();
-            $table->foreignId('prodi_id')->constrained()->cascadeOnUpdate();
-            $table->foreignId('departemen_id')->constrained()->cascadeOnUpdate();
+            $table->date('tanggal_lahir');
+            $table->string('telepon');
             $table->timestamps();
         });
     }

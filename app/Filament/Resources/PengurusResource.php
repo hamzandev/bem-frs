@@ -26,6 +26,8 @@ class PengurusResource extends Resource
     protected static ?string $model = Pengurus::class;
     protected static ?string $navigationLabel = 'Pengurus';
 
+    protected static ?string $navigationGroup = 'Kepengurusan';
+
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
     public static function form(Form $form): Form
@@ -33,35 +35,32 @@ class PengurusResource extends Resource
         return $form
             ->schema([
                 Section::make('Informasi Pengurus')->schema([
-                    TextInput::make('nim')
-                        ->required()
-                        ->columnSpan(2)
-                        ->numeric(),
                     TextInput::make('nama')
+                        ->label('Nama Lengkap')
+                        ->required()->columnSpan(2),
+                    TextInput::make('nim')
+                        ->label('NIM')
                         ->required()
-                        ->columnSpan(2),
+                        ->numeric(),
                     Select::make('gender')
                         ->options([
                             'L' => "Laki-Laki",
                             'P' => "Perempuan",
                         ])->required(),
+                    TextInput::make('telepon')->required()->numeric(),
                     DatePicker::make('tanggal_lahir')->required(),
-                    Select::make('prodi_id')
-                        ->label('Prodi')
-                        ->required()
-                        ->relationship('prodi', 'nama'),
-                    Select::make('departemen_id')
-                        ->label('Departemen')
-                        ->required()
-                        ->relationship('departemen', 'nama')
-                        ->searchable(),
-                    TextInput::make('jabatan')->required(),
-                    TextInput::make('tahun_kepengurusan')
-                        ->required()
-                        ->numeric(),
+                    // Select::make('prodi_id')
+                    //     ->label('Prodi')
+                    //     ->required()
+                    //     ->relationship('prodi', 'nama'),
+                    // Select::make('departemen_id')
+                    //     ->label('Departemen')
+                    //     ->required()
+                    //     ->relationship('departemen', 'nama')
+                    //     ->searchable(),
                 ])->columns(2)
-                ->columnSpan(2),
-                Section::make('foto')->schema([
+                    ->columnSpan(2),
+                Section::make('Foto')->schema([
                     FileUpload::make('foto')->nullable(),
                 ])->columnSpan(1)
             ])->columns(3);
@@ -75,7 +74,7 @@ class PengurusResource extends Resource
                 TextColumn::make('nim')->sortable(),
                 TextColumn::make('nama')->sortable(),
                 TextColumn::make('gender'),
-                TextColumn::make('departemen.nama'),
+                // TextColumn::make('departemen.nama'),
             ])
             ->searchable()
             ->filters([
@@ -83,6 +82,7 @@ class PengurusResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

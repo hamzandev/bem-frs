@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('departemens', function (Blueprint $table) {
-            $table->id()->autoIncrement();
-            $table->string('nama_departemen');
-            $table->foreignId('kepala_departemen')
-                ->constrained()->references('id')->on('penguruses')
-                ->cascadeOnUpdate();
-            $table->foreignId('bidang_id')->constrained()->cascadeOnUpdate();
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id();
+            $table->string('category')->unique();
+            $table->string('slug')->unique();
             $table->text('detail')->nullable();
             $table->timestamps();
         });
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('departemens');
+        Schema::dropIfExists('categories');
     }
 };

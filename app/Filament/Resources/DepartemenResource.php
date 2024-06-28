@@ -21,6 +21,8 @@ class DepartemenResource extends Resource
 {
     protected static ?string $model = Departemen::class;
 
+    protected static ?string $navigationGroup = 'Kepengurusan';
+
     protected static ?string $navigationIcon = 'heroicon-o-home-modern';
     protected static ?string $navigationLabel = 'Departemen';
 

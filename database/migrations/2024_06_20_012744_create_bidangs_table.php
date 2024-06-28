@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('departemens', function (Blueprint $table) {
-            $table->id()->autoIncrement();
-            $table->string('nama_departemen');
-            $table->foreignId('kepala_departemen')
+        Schema::create('bidangs', function (Blueprint $table) {
+            $table->id();
+            $table->string('bidang');
+            // tersangka error dari Gemini
+            $table->foreignId('kepala_bidang')
                 ->constrained()->references('id')->on('penguruses')
-                ->cascadeOnUpdate();
-            $table->foreignId('bidang_id')->constrained()->cascadeOnUpdate();
+                ->unique()->cascadeOnUpdate();
             $table->text('detail')->nullable();
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('departemens');
+        Schema::dropIfExists('bidangs');
     }
 };

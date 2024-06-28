@@ -11,14 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('prodis', function (Blueprint $table) {
+        Schema::create('jabatans', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('prodi');
-            $table->text('detail');
-            $table->string('logo')->nullable();
-            $table->string('nama_kahim')->nullable();
-            $table->string('foto_kahim')->nullable();
-            $table->string('website')->nullable();
+            $table->string('jabatan')->unique();
             $table->timestamps();
         });
     }
@@ -28,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('prodis');
+        Schema::dropIfExists('jabatans');
     }
 };

@@ -20,6 +20,9 @@ class JurnalResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
     protected static ?string $navigationLabel = 'Jurnal';
 
+    protected static ?string $navigationGroup = 'Jurnalistik';
+
+
     public static function form(Form $form): Form
     {
         return $form
