@@ -15,14 +15,8 @@
    $ composer install
    ```
 3. Copy file ``.env.example`` dan paste lalu rename jadi ``.env``
-4. Buat database pada phpmyadmin anda dengan nama ``bem_frs`` 
-5. Pindahkan 2 file migrasi (departemen & pengurus_detail) ke luar folder migrations. Hal ini bertujuan untuk menghindari error karena urutan peng-eksekusian file migrasi yang tidak terurut oleh Laravel.
-6. Lakukan Migrasi (tahap 1) :
-    ```
-    $ php artisan migrate
-    ```
-7. Pindahkah kembali 2 file migrasi (departemen & pengurus_detail) kedalam folder migrations.
-8. Lakukan Migrasi (tahap 2) sambil melakukan Seeding :
+4. Buat database pada phpmyadmin anda dengan nama ``bem_frs``
+5. Lakukan Migrasi (tahap 1) :
     ```
     $ php artisan migrate --seed
     ```
