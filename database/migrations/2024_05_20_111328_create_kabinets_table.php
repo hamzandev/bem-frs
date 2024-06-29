@@ -11,15 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('prodis', function (Blueprint $table) {
-            $table->id()->autoIncrement();
-            $table->string('prodi');
-            $table->string('kaprodi');
-            $table->text('detail');
+        Schema::create('kabinets', function (Blueprint $table) {
+            $table->id();
+            $table->string('kabinet');
+            $table->string('periode');
             $table->string('logo')->nullable();
-            $table->string('kahim')->nullable();
-            $table->string('foto_kahim')->nullable();
-            $table->string('website')->nullable();
+            $table->text('detail');
             $table->timestamps();
         });
     }
@@ -29,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('prodis');
+        Schema::dropIfExists('kabinets');
     }
 };

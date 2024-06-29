@@ -16,6 +16,8 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\Column;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -70,7 +72,7 @@ class PengurusResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('foto'),
+                // ImageColumn::make('foto'),
                 TextColumn::make('nim')->sortable(),
                 TextColumn::make('nama')->sortable(),
                 TextColumn::make('gender'),

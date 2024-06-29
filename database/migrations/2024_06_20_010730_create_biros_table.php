@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('biros', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_biro')->unique();
+            $table->string('biro')->unique();
             $table->foreignId('kepala_biro')
                 ->constrained()->references('id')->on('penguruses')
                 ->cascadeOnUpdate();

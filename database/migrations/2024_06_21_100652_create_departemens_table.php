@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('penguruses', function (Blueprint $table) {
+        Schema::create('departemens', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('nim');
-            $table->string('nama');
-            $table->enum('gender', ['L', 'P']);
-            $table->string('foto')->nullable();
-            $table->date('tanggal_lahir');
-            $table->string('telepon');
+            $table->string('departemen');
+            $table->foreignId('kepala_departemen')
+                ->constrained()->references('id')->on('penguruses')
+                ->cascadeOnUpdate();
+            $table->foreignId('bidang_id')->constrained()->cascadeOnUpdate();
+            $table->text('detail')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('penguruses');
+        Schema::dropIfExists('departemens');
     }
 };

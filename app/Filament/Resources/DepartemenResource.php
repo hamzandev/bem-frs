@@ -8,6 +8,8 @@ use App\Filament\Resources\DepartemenResource\RelationManagers\PengurusRelationM
 use App\Models\Departemen;
 use Filament\Forms;
 use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -21,7 +23,7 @@ class DepartemenResource extends Resource
 {
     protected static ?string $model = Departemen::class;
 
-    protected static ?string $navigationGroup = 'Kepengurusan';
+    protected static ?string $navigationGroup = 'Struktural';
 
     protected static ?string $navigationIcon = 'heroicon-o-home-modern';
     protected static ?string $navigationLabel = 'Departemen';
@@ -35,16 +37,27 @@ class DepartemenResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('nama')->required(),
-                MarkdownEditor::make('deskripsi')->required(),
-            ])->columns(1);
+                Section::make('Informasi Departemen')->schema([
+                    TextInput::make('departemen')
+                        ->required()->unique('departemens', 'departemen')
+                        ->columnSpan(2),
+                    Select::make('bidang_id')->relationship('bidang', 'bidang')
+                        ->required()->label('Pilih Bidang'),
+                    Select::make('kepala_departemen')->relationship('pengurus', 'nama')
+                        ->required()->unique('departemens', 'kepala_departemen')
+                        ->label('Kepala Departemen'),
+                    MarkdownEditor::make('detail')->columnSpan(2),
+                ])->columns(2)->columnSpan(10),
+            ])->columns(12);
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('nama'),
+                TextColumn::make('departemen'),
+                TextColumn::make('bidang.bidang')->label('Bidang'),
+                TextColumn::make('pengurus.nama')->label('Kepala Departemen'),
             ])
             ->filters([
                 //

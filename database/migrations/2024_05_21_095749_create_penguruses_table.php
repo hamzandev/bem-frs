@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pengurus_details', function (Blueprint $table) {
+        Schema::create('penguruses', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->year('tahun_pengurus');
-            $table->foreignId('pengurus_id')->unique()->constrained()->cascadeOnUpdate();
-            $table->foreignId('prodi_id')->constrained()->cascadeOnUpdate();
+            $table->string('nama');
+            $table->string('nim')->unique();
             $table->foreignId('jabatan_id')->constrained()->cascadeOnUpdate();
-            $table->foreignId('departemen_id')->constrained()->cascadeOnUpdate();
-            $table->foreignId('biro_id')->constrained()->cascadeOnUpdate();
+            // ->nullOnDelete();
+            $table->foreignId('prodi_id')->constrained()->cascadeOnUpdate();
+            // ->nullOnDelete();
+            $table->string('foto')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pengurus_details');
+        Schema::dropIfExists('penguruses');
     }
 };

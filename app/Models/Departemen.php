@@ -11,10 +11,11 @@ class Departemen extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'nama',
-        'deskripsi',
-    ];
+    protected $guarded = [];
+    // protected $fillable = [
+    //     'nama',
+    //     'deskripsi',
+    // ];
 
     // function pengurus() : HasMany {
     //     return $this->hasMany(Pengurus::class);
@@ -26,7 +27,7 @@ class Departemen extends Model
 
     // Seorang pengurus bisa & hanya bisa menjadi ketua di sebuah departemen
     function pengurus() : BelongsTo {
-        return $this->belongsTo(Pengurus::class);
+        return $this->belongsTo(Pengurus::class, 'kepala_departemen', 'id');
     }
 
     function bidang() : BelongsTo {

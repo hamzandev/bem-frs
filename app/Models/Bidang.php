@@ -11,12 +11,14 @@ class Bidang extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     function departemens() : HasMany {
         return $this->hasMany(Departemen::class);
     }
 
     // Seorang pengurus bisa & hanya bisa menjadi ketua di sebuah bidang
     function pengurus() : BelongsTo {
-        return $this->belongsTo(Pengurus::class);
+        return $this->belongsTo(Pengurus::class, 'kepala_bidang', 'id');
     }
 }

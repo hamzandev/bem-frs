@@ -26,18 +26,18 @@ class ProdiResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
     protected static ?string $modelLabel = 'Program Studi';
 
-    protected static ?string $navigationGroup = 'Kepengurusan';
+    protected static ?string $navigationGroup = 'Struktural';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Section::make('Informasi Prodi')->schema([
-                    TextInput::make('nama')->columnSpan(2)->label('Nama Prodi')->required(),
-                    TextInput::make('website')->nullable()->url(),
+                    TextInput::make('prodi')->columnSpan(2)->label('Nama Prodi')->required(),
                     TextInput::make('nama_kahim')
-                            ->label('Ketua Himpunan')->required(),
-                    MarkdownEditor::make('deskripsi')->required()->columnSpan(2),
+                        ->label('Ketua Himpunan')->required(),
+                    TextInput::make('website')->nullable(),
+                    MarkdownEditor::make('detail')->required()->columnSpan(2),
                 ])->columns(2)->columnSpan(8),
 
                 Section::make('Gambar')->schema([
@@ -51,8 +51,9 @@ class ProdiResource extends Resource
     {
         return $table
             ->columns([
-                ImageColumn::make('logo'),
-                TextColumn::make('nama')
+                // ImageColumn::make('logo'),
+                TextColumn::make('prodi')->label('Nama Prodi'),
+                TextColumn::make('nama_kahim')->label('Ketua Himpunan'),
             ])
             ->filters([
                 //

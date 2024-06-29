@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Biro extends Model
@@ -12,5 +13,9 @@ class Biro extends Model
 
     function pengurus_details() : HasMany {
         return $this->hasMany(PengurusDetail::class);
+    }
+
+    function pengurus() : BelongsTo {
+        return $this->belongsTo(Pengurus::class);
     }
 }
