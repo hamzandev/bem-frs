@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 * {
-    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Space Grotesk', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+@layer utilities {
+    .paused {
+      animation-play-state: paused;
+    }
+  }

@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', fn () => view('home.index'));
+Route::get('/', fn () => view('home'))->name('home');
+Route::get('/about', fn () => view('about'))->name('about');
+Route::get('/aspirasi', fn () => view('aspirasi'))->name('aspirasi');
+
 
 // Route::redirect('/', '/admin/login');
