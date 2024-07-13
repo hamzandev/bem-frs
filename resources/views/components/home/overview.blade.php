@@ -1,4 +1,4 @@
-<dl
+{{-- <dl
     class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
     <div class="flex flex-col items-center justify-center">
         <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
@@ -24,4 +24,4 @@
         <dt class="mb-2 text-3xl font-extrabold">4M+</dt>
         <dd class="text-gray-500 dark:text-gray-400">Organizations</dd>
     </div>
-</dl>
+</dl> --}}

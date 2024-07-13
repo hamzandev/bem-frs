@@ -30,83 +30,36 @@
         </ul>
     </div>
     <div id="default-tab-content">
-        <div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 grid lg:grid-cols-3 gap-5" id="visi" role="tabpanel"
+        <div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 grid lg:grid-cols-1 gap-5" id="visi" role="tabpanel"
             aria-labelledby="visi-tab">
             {{-- Card --}}
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
+            <div class="block max-w-full p-7 bg-white border border-gray-200 rounded-lg shadow">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                     Menjadikan BEM FRS sebagai wadah Kolaborasi Berdasarkan Kultur dan Budaya untuk Mahasiswa FRS di
                     Bidang Teknologi agar terwujudnya Mahasiswa yang berintergritas, Kritis, dan Inovatif.
                 </h5>
             </div>
-            {{-- Card --}}
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2024
-                </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise
-                    technology acquisitions of 2021 so far, in reverse chronological order.
-                </p>
-            </div>
-            {{-- Card --}}
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2024
-                </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise
-                    technology acquisitions of 2021 so far, in reverse chronological order.
-                </p>
-            </div>
-
         </div>
         <div class="grid lg:grid-cols-3 gap-5 p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="misi" role="tabpanel"
             aria-labelledby="misi-tab">
             {{-- Card --}}
             <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2024
+                    Membangun Kerja Sama Yang Harmonis Antara Lembaga Mahasiswa
                 </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise
-                    technology acquisitions of 2021 so far, in reverse chronological order.
-                </p>
             </div>
 
             {{-- Card --}}
             <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2024
+                    Mengadvokasi Kebutuhan Akademik, Minat dan Bakat Mahasiswa FRS
                 </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise
-                    technology acquisitions of 2021 so far, in reverse chronological order.
-                </p>
             </div>
-
-
             {{-- Card --}}
             <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2024
+                   Mengakselerasi Sumber Daya Mahasiswa Agar Membangung Jiwa Kritis dan Sosial
                 </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise
-                    technology acquisitions of 2021 so far, in reverse chronological order.
-                </p>
-            </div>
-
-
-            {{-- Card --}}
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2024
-                </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise
-                    technology acquisitions of 2021 so far, in reverse chronological order.
-                </p>
             </div>
         </div>
     </div>
