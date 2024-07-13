@@ -6,7 +6,7 @@
             alt="dekan" class="w-full h-full object-cover">
     </div>
     <div id="typography" class="flex flex-col gap-3 lg:w-7/12 2xl:w-1/2 lg:text-start text-center lg:my-0 my-5">
-        <h2 class="lg:text-4xl text-3xl font-bold capitalize">Sambutan Ketua Badan Eksekutif Mahasiswa FRS</h2>
+        <h2 class="lg:text-4xl text-3xl font-bold capitalize">Sambutan Ketua Badan Eksekutif Mahasiswa FRS 2024 - 2025</h2>
         <h3 class="text-lg px-3 py-1 my-3 lg:border-s-2 border-b-2 border-blue-500 w-max lg:mx-0 mx-auto">Widarman.</h3>
         <div class="text-gray-500 text-lg gap-5 grid 2xl:w-4/5" id="text-content">
             <p>
