@@ -9,12 +9,13 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Category extends Model
 {
     use HasFactory;
-
-    function aspirasis() : HasMany {
+    protected $fillable = ['category', 'slug', 'detail'];
+    public function aspirasis()
+    {
         return $this->hasMany(Aspirasi::class);
     }
-
-    function jurnals() : HasMany {
+    public function jurnals()
+    {
         return $this->hasMany(Jurnal::class);
     }
 }

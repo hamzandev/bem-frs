@@ -5,48 +5,48 @@
 
     <div class="flex space-x-16 animate-loop-scroll group-hover:paused ">
         <img loading="lazy"
-            src="../img/Logo BEM FRS.png"
+            src="../img/BEM FRS.png"
             class="max-w-none w-32 h-32" alt="Image 1" />
         <img loading="lazy"
-            src="../img/DPM.jpg"
+            src="../img/DPM.png"
             class="max-w-none w-32 h-32" alt="Image 2" />
         <img loading="lazy"
             src="../img/Logo-HMIT.png"
             class="max-w-none w-32 h-32" alt="Image 3" />
         <img loading="lazy"
-            src="../img/HMM.jpg"
+            src="../img/HMM.png"
             class="max-w-none w-32 h-32" alt="Image 4" />
         <img loading="lazy"
-            src="../img/Astro.jpg"
+            src="../img/ASTRO.png"
             class="max-w-none w-32 h-32" alt="Image 5" />
         <img loading="lazy"
             src="../img/HMTI.png"
             class="max-w-none w-32 h-32" alt="Image 6" />
         <img loading="lazy"
-            src="../img/COSTING.jpg"
+            src="../img/COSTING.png"
             class="max-w-none w-32 h-32" alt="Image 7" />
     </div>
     <div class="flex space-x-16 animate-loop-scroll group-hover:paused" aria-hidden="true">
         <img loading="lazy"
-            src="../img/Logo BEM FRS.png"
+            src="../img/BEM FRS.png"
             class="max-w-none w-32 h-32" alt="Image 1" />
         <img loading="lazy"
-            src="../img/DPM.jpg"
+            src="../img/DPM.png"
             class="max-w-none w-32 h-32" alt="Image 2" />
         <img loading="lazy"
             src="../img/Logo-HMIT.png"
             class="max-w-none w-32 h-32" alt="Image 3" />
         <img loading="lazy"
-            src="../img/HMM.jpg"
+            src="../img/HMM.png"
             class="max-w-none w-32 h-32" alt="Image 4" />
         <img loading="lazy"
-            src="../img/Astro.jpg"
+            src="../img/ASTRO.png"
             class="max-w-none w-32 h-32" alt="Image 5" />
         <img loading="lazy"
             src="../img/HMTI.png"
             class="max-w-none w-32 h-32" alt="Image 6" />
         <img loading="lazy"
-            src="../img/COSTING.jpg"
+            src="../img/COSTING.png"
             class="max-w-none w-32 h-32" alt="Image 7" />
     </div>
 </div>

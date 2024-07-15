@@ -9,7 +9,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Aspirasi extends Model
 {
     use HasFactory;
-
+    protected $fillable = [
+        'nama_mahasiswa',
+        'category_id',
+        'telepon',
+        'judul',
+        'aspirasi',
+        'is_anonimous',
+    ];
     function category() : BelongsTo {
         return $this->belongsTo(Category::class);
     }

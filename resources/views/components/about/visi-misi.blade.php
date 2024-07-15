@@ -1,8 +1,7 @@
 <section id="visi-misi" class="py-32 bg-white lg:px-10 rounded-b-2xl shadow-sm">
     <header id="heading" class="lg:flex grid lg:gap-10">
         <div id="ilustration" class="lg:w-2/5 w-3/4 lg:mx-0 mx-auto lg:aspect-square">
-            <img src="https://cdn.dribbble.com/users/3005912/screenshots/7144474/media/2e6d66e19337166411cad87f1e223b65.jpg"
-                alt="ilustration">
+            <img src="../img/Logo Kabinet.png" alt="ilustration">
         </div>
 
         <div id="typography" class="lg:w-3/5 pt-5 lg:flex justify-center flex-col lg:text-start text-center">
