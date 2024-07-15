@@ -13,8 +13,8 @@ class Category extends Model
     function aspirasis() : HasMany {
         return $this->hasMany(Aspirasi::class);
     }
-
-    function jurnals() : HasMany {
+    public function jurnals()
+    {
         return $this->hasMany(Jurnal::class);
     }
 
