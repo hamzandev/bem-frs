@@ -2,11 +2,9 @@
 <div class="lg:h-[65vh] lg:flex container mx-auto gap-10 lg:px-0 px-4 items-center my-20 flex-row-reverse">
     <div id="dekan-image"
         class="rounded-tr-[100px] rounded-tl-xl rounded-br-xl rounded-bl-[100px] lg:h-full lg:aspect-auto aspect-square lg:w-5/12 2xl:w-1/2 overflow-hidden">
-        <img src="../img/Widarman.JPG"
+        <img src="{{ asset('img/Widarman.JPG') }}"
             alt="dekan" class="w-full h-full object-cover">
     </div>
-    <div id="typography" class="flex flex-col gap-3 lg:w-7/12 2xl:w-1/2 lg:text-start text-center lg:my-0 my-5">
-        <h2 class="lg:text-4xl text-3xl font-bold capitalize">Sambutan Ketua Badan Eksekutif Mahasiswa FRS 2024 - 2025</h2>
     <div id="typography" class="flex flex-col gap-3 lg:w-7/12 2xl:w-1/2 md:text-start text-center lg:my-0 my-5">
         <h2 class="md:text-4xl text-3xl font-bold capitalize">Sambutan Ketua Badan Eksekutif Mahasiswa FRS</h2>
         <h3 class="text-lg px-3 py-1 my-3 lg:border-s-2 border-b-2 border-blue-500 w-max lg:mx-0 mx-auto">Widarman.</h3>

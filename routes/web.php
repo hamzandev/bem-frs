@@ -19,8 +19,6 @@ Route::post('/aspirasi', [AspirasiController::class, 'store'] )->name('aspirasi.
 
 Route::resource('/artikel', ArtikelController::class)->only(['index', 'show']);
 
-use App\Http\Controllers\AspirasiController;
-
 Route::get('/aspirasi/create', [AspirasiController::class, 'create'])->name('aspirasi.create');
 Route::post('/aspirasi/store', [AspirasiController::class, 'store'])->name('aspirasi.store');
 
