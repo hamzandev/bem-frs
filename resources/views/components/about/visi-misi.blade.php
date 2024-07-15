@@ -5,15 +5,15 @@
                 alt="ilustration">
         </div>
 
-        <div id="typography" class="lg:w-3/5 pt-5 lg:flex justify-center flex-col lg:text-start text-center">
-            <h1 class="lg:text-5xl text-3xl mb-3 lg:w-[80%] font-extrabold">Visi & Misi BEM-FRS</h1>
-            <p class="lg:text-xl text-lg text-gray-400">Pada bagian ini, kamu akan temukan
+        <div id="typography" class="lg:w-3/5 pt-5 lg:flex justify-center flex-col md:text-start text-center">
+            <h1 class="md:text-5xl text-3xl mb-3 lg:w-[80%] font-extrabold">Visi & Misi BEM-FRS</h1>
+            <p class="md:text-xl text-lg text-gray-400">Pada bagian ini, kamu akan temukan
                 Visi dan juga Misi terdepan Badan Eksekutif Mahasiswa Fakultas Rekayasa Sistem.</p>
         </div>
     </header>
 
     {{-- Tabs --}}
-    <div class="mb-4 border-b border-gray-200 -mt-20 dark:border-gray-700">
+    <div class="mb-4 border-b border-gray-200 lg:-mt-20 mt-5 dark:border-gray-700">
         <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab"
             data-tabs-toggle="#default-tab-content" role="tablist">
             <li class="me-2" role="presentation">
@@ -32,85 +32,16 @@
     <div id="default-tab-content">
         <div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 grid lg:grid-cols-3 gap-5" id="visi" role="tabpanel"
             aria-labelledby="visi-tab">
-            {{-- Card --}}
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2024
-                </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise
-                    technology acquisitions of 2021 so far, in reverse chronological order.
-                </p>
-            </div>
-            {{-- Card --}}
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2024
-                </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise
-                    technology acquisitions of 2021 so far, in reverse chronological order.
-                </p>
-            </div>
-            {{-- Card --}}
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2024
-                </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise
-                    technology acquisitions of 2021 so far, in reverse chronological order.
-                </p>
-            </div>
+            @foreach (range(1, 5) as $visi)
+                <x-about.visi-misi-card title="{{ $visi }}"></x-about.visi-misi-card>
+            @endforeach
 
         </div>
         <div class="grid lg:grid-cols-3 gap-5 p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="misi" role="tabpanel"
             aria-labelledby="misi-tab">
-            {{-- Card --}}
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2024
-                </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise
-                    technology acquisitions of 2021 so far, in reverse chronological order.
-                </p>
-            </div>
-
-            {{-- Card --}}
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2024
-                </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise
-                    technology acquisitions of 2021 so far, in reverse chronological order.
-                </p>
-            </div>
-
-
-            {{-- Card --}}
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2024
-                </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise
-                    technology acquisitions of 2021 so far, in reverse chronological order.
-                </p>
-            </div>
-
-
-            {{-- Card --}}
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2024
-                </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise
-                    technology acquisitions of 2021 so far, in reverse chronological order.
-                </p>
-            </div>
+            @foreach (range(1, 4) as $misi)
+               <x-about.visi-misi-card title="{{ $misi }}"></x-about.visi-misi-card>
+            @endforeach
         </div>
     </div>
 

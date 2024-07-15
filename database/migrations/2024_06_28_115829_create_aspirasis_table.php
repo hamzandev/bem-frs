@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('aspirasis', function (Blueprint $table) {
             $table->id();
             $table->string('nama_mahasiswa');
-            $table->foreignId('category_id')->constrained()->cascadeOnUpdate();
+            $table->foreignId('aspirasis_category_id')->constrained()
+                ->on('aspirasi_categories')->references('id')->cascadeOnUpdate();
             $table->string('judul');
             $table->longText('aspirasi');
             $table->string('telepon')->nullable();

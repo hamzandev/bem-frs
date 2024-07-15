@@ -13,12 +13,14 @@ return new class extends Migration
     {
         Schema::create('artikels', function (Blueprint $table) {
             $table->id()->autoIncrement();
+            $table->foreignId('category_id')->nullable()->constrained()->cascadeOnUpdate();
+            $table->foreignId('user_id')->constrained()->cascadeOnUpdate();
             $table->string('judul');
             $table->string('slug');
-            $table->string('konten');
-            $table->enum('status', ['draft', 'published'])->default('draft');
+            $table->longText('konten');
+            $table->boolean('is_published')->default(false);
             $table->string('gambar')->nullable();
-            $table->json('tags');
+            $table->date('published_at')->nullable();
             // $table->json('categroies');
             $table->timestamps();
         });

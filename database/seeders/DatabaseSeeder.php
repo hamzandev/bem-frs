@@ -257,7 +257,25 @@ class DatabaseSeeder extends Seeder
             ],
         ]);
 
-        // Kabinet
+        // Aspirasi Category
+        \App\Models\AspirasiCategory::insert([
+            [
+                'category' => 'Kinerja BEM',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'category' => 'Fasilitas Kampus',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'category' => 'Laporan Dosen',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+
         // Kabinet
         \App\Models\Kabinet::insert([
             [

@@ -1,5 +1,6 @@
 {{-- Infinite Logo  --}}
-<div class="relative flex overflow-hidden space-x-16 my-10">
+<div class="relative flex overflow-hidden space-x-16 my-10 2xl:container 2xl:mx-auto">
+    {{-- Faded overlay --}}
     <div id="kiri" class="absolute left-0 inset-y-0 w-4/12 bg-gradient-to-r from-white z-10 to-transparent"></div>
     <div id="kanan" class="absolute right-0 inset-y-0 w-4/12 bg-gradient-to-l from-white z-10 to-transparent"></div>
 

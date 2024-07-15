@@ -10,7 +10,9 @@ class Aspirasi extends Model
 {
     use HasFactory;
 
-    function category() : BelongsTo {
-        return $this->belongsTo(Category::class);
+    protected $guarded = [];
+
+    function aspirasis_category() : BelongsTo {
+        return $this->belongsTo(AspirasiCategory::class, 'aspirasis_category_id');
     }
 }

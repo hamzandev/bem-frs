@@ -6,15 +6,16 @@
         </div>
 
         <div id="typography" class="lg:w-3/5 lg:pt-20 -pt-10">
-            <h1 class="lg:text-5xl text-3xl mb-3 lg:w-[80%] font-extrabold">Sejarah & Latar Belakang BEM-FRS
+            <h1 class="md:text-5xl text-3xl mb-3 lg:w-[80%] font-extrabold">
+                Sejarah & Latar Belakang BEM-FRS
             </h1>
-            <p class="lg:text-xl text-lg text-gray-500">Pada bagian ini, kamu akan temukan
+            <p class="md:text-xl text-lg text-gray-500">Pada bagian ini, kamu akan temukan
                 Sejarah dan juga Latar
                 Belakang terbentuknya Badan Eksekutif Mahasiswa Fakultas Rekayasa Sistem.</p>
         </div>
     </header>
 
-    <article class="text-gray-500 lg:text-lg grid lg:grid-cols-2 gap-8 lg:my-0 my-10">
+    <article class="text-gray-500 md:text-lg grid lg:grid-cols-2 gap-8 lg:my-0 my-10">
         <div class="space-y-5">
             <h2 class="text-3xl text-black font-extrabold mb-5">Pembentukan</h2>
             <p class="leading-relaxed">
