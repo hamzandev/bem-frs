@@ -1,5 +1,9 @@
 # Website BEM FRS
 
+#### Previews
+![Beranda](./previews/beranda.png)
+
+![Beranda](./previews/aspirasi.png)
 - Branch Dev : Untuk Development
 
 ### Requirement
