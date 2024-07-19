@@ -50,19 +50,6 @@ class Artikel extends Model
             ->paginate($limit);
     }
 
-
-
-    // public static function getAllLatest(int $limit = 10, bool $latest = true): \Illuminate\Pagination\LengthAwarePaginator
-    // {
-    //     $query = self::query()
-    //         ->where('is_published', 1)
-    //         ->with(['category', 'user']);
-    //     if ($latest) {
-    //         return $query->latest()->paginate($limit);
-    //     }
-    //     return $query->oldest()->paginate($limit);
-    // }
-
     public static function getAllByCategory(int $categoryId, int $limit = 10): \Illuminate\Pagination\LengthAwarePaginator
     {
         return self::where('category_id', $categoryId)

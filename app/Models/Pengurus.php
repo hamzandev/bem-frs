@@ -48,4 +48,13 @@ class Pengurus extends Model
         return $this->belongsTo(Prodi::class);
     }
 
+
+    /* ================== Queries Method ==================== */
+
+    static function getAllNoProfile() {
+        return static::select('id', 'nama')
+            ->whereDoesntHave('pengurus_detail')
+            ->pluck('nama', 'id');
+    }
+
 }

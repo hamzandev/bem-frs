@@ -38,6 +38,9 @@ class UserResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->query(function (User $query) {
+                return $query->where('id', '!=', auth()->user()->id);
+            })
             ->columns([
                 TextColumn::make('name'),
                 TextColumn::make('email'),

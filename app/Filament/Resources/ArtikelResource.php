@@ -19,9 +19,11 @@ use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\BadgeColumn;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
 
@@ -86,6 +88,7 @@ class ArtikelResource extends Resource
     {
         return $table
             ->columns([
+                ImageColumn::make('gambar'),
                 Tables\Columns\TextColumn::make('judul')
                     ->formatStateUsing(function ($state) {
                         return Str::words($state, 5);
@@ -98,9 +101,6 @@ class ArtikelResource extends Resource
                     ->color(fn ($record) => $record->is_published ? 'success' : 'info')
                     ->formatStateUsing(fn ($record) => $record->is_published ? 'Published' : 'Draft'),
             ])
-            ->filters([
-                //
-            ])
             ->actions([
                 Tables\Actions\Action::make('Lihat')
                     ->url(fn (Artikel $record): string => route('artikel.show', $record))
@@ -108,6 +108,7 @@ class ArtikelResource extends Resource
                     ->icon('heroicon-o-eye')
                     ->iconButton(),
                 Tables\Actions\EditAction::make()->iconButton(),
+                    // ->url(fn (Model $record): string => static::getUrl('edit', ['record' => $record->slug])),
                 Tables\Actions\DeleteAction::make()->iconButton(),
             ])
             ->searchable()

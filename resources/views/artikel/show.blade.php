@@ -15,7 +15,7 @@
                     <x-artikel.category-badge category="{{ $artikel->category->category }}"></x-artikel.category-badge>
                 @endif
 
-                <x-artikel.artikel-image :src="$artikel->gambar"></x-artikel.artikel-image>
+                <x-artikel.artikel-image src="{{ $artikel->gambar }}"></x-artikel.artikel-image>
 
                 {{ Illuminate\Mail\Markdown::parse($artikel->konten) }}
             </article>

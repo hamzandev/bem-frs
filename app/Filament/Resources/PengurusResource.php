@@ -29,7 +29,7 @@ class PengurusResource extends Resource
     protected static ?string $navigationLabel = 'Pengurus';
 
     protected static ?string $navigationGroup = 'Kepengurusan';
-
+    protected static ?string $pluralModelLabel = 'data pengurus';
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
     public static function form(Form $form): Form
@@ -39,27 +39,21 @@ class PengurusResource extends Resource
                 Section::make('Informasi Pengurus')->schema([
                     TextInput::make('nama')
                         ->label('Nama Lengkap')
-                        ->required()->columnSpan(2),
+                        ->required()
+                        ->columnSpan(2),
                     TextInput::make('nim')
+                        ->columnSpan(2)
                         ->label('NIM')
                         ->required()
                         ->numeric(),
-                    Select::make('gender')
-                        ->options([
-                            'L' => "Laki-Laki",
-                            'P' => "Perempuan",
-                        ])->required(),
-                    TextInput::make('telepon')->required()->numeric(),
-                    DatePicker::make('tanggal_lahir')->required(),
-                    // Select::make('prodi_id')
-                    //     ->label('Prodi')
-                    //     ->required()
-                    //     ->relationship('prodi', 'nama'),
-                    // Select::make('departemen_id')
-                    //     ->label('Departemen')
-                    //     ->required()
-                    //     ->relationship('departemen', 'nama')
-                    //     ->searchable(),
+                    Select::make('prodi_id')
+                        ->label('Prodi')
+                        ->required()
+                        ->relationship('prodi', 'prodi'),
+                    Select::make('jabatan_id')
+                        ->label('Jabatan')
+                        ->required()
+                        ->relationship('jabatan', 'jabatan')
                 ])->columns(2)
                     ->columnSpan(2),
                 Section::make('Foto')->schema([
@@ -73,10 +67,9 @@ class PengurusResource extends Resource
         return $table
             ->columns([
                 // ImageColumn::make('foto'),
-                TextColumn::make('nim')->sortable(),
+                // prodi, angkatan, gender
                 TextColumn::make('nama')->sortable(),
-                TextColumn::make('gender'),
-                // TextColumn::make('departemen.nama'),
+                TextColumn::make('nim')->sortable(),
             ])
             ->searchable()
             ->filters([

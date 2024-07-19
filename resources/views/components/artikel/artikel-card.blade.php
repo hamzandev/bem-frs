@@ -12,7 +12,7 @@
         {{-- badges --}}
         <x-artikel.category-badge></x-artikel.category-badge>
         <h2 class="text-xl font-bold line-clamp-3 leading-tight text-gray-800">
-            <a href="#" class="hover:underline">
+            <a href="{{ route('artikel.show', $artikel->id) }}" class="hover:underline">
                 {{ $artikel->judul ??
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit.Laboriosam asperiores officia nostrum. "
                 }}

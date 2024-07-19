@@ -30,7 +30,7 @@ class ArtikelController extends Controller
 
         $latestArtikels = Artikel::getOtherArticles($id, 5, true);
         $otherArtikels = Artikel::getOtherArticles($id, 5);
-        // dd($otherArtikels);
+
         return view('artikel.show', compact('artikel', 'otherArtikels', 'latestArtikels'));
     }
 }
