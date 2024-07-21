@@ -1,10 +1,10 @@
 <x-app title="Berita & Rilis Kajian">
     <div class="container mx-auto md:px-0 px-4">
         <header id="heading-berita" class="py-10 space-y-3 text-center">
-            <h1 class="text-3xl font-bold">Berita dan Rilis Kajian</h1>
-            <p class="md:text-lg text-gray-500 lg:w-4/5 lg:mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Reiciendis, deleniti maiores eaque totam inventore error, recusandae et ipsa fuga nostrum soluta
-                similique, doloremque ipsam nulla.</p>
+            <h1 class="text-3xl font-bold">Artikel dan Berita</h1>
+            <p class="md:text-lg text-gray-500 lg:w-4/5 lg:mx-auto">
+                Pada halaman ini kamu akan menemukan semua artikel dan berita seputar BEM FRS maupun aktifitas mahasiswa Fakultas Rekayasa Sistem.
+            </p>
         </header>
 
             @if($latestArtikel == null)

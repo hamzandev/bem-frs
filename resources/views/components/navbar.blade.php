@@ -31,12 +31,12 @@
             'route' => 'aspirasi',
         ],
         [
-            'label' => 'Artikel',
+            'label' => 'Artikel & Berita',
             'route' => 'artikel.index',
         ],
         [
-            'label' => 'Kontak',
-            'route' => 'kontak',
+            'label' => 'Jurnal',
+            'route' => 'jurnal',
         ],
     ]);
 @endphp

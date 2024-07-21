@@ -36,7 +36,7 @@ class JurnalResource extends Resource
                     TextInput::make('penulis')->required(),
                     DatePicker::make('tanggal_publish')->required(),
                     Select::make('category_id')->relationship('category', 'category')->required(),
-                    Textarea::make('deskripsi')->columnSpan(2),
+                    Textarea::make('deskripsi')->required()->columnSpan(2),
                 ])->columns(2)->columnSpan(3),
 
                 Section::make('File Jurnal')->schema([

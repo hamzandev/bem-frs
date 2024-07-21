@@ -73,7 +73,7 @@ class Artikel extends Model
 
     public static function getOtherArticles(String|int $id, int $limit = 5, $latest = false)
     {
-        return self::select('id', 'judul', 'published_at', 'category_id', 'user_id')
+        return self::select('id', 'judul', 'published_at', 'category_id', 'user_id', 'gambar')
             ->with(['category:id,category', 'user:id,name'])
             ->where('id', '!=', $id)
             ->when($latest, function ($query) {
