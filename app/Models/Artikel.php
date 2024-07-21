@@ -32,7 +32,7 @@ class Artikel extends Model
         return self::where('is_published', 1)
             ->latest('published_at')
             ->take($n)
-            ->get(['id', 'judul', 'published_at', 'category_id', 'user_id']);
+            ->get(['id', 'judul', 'published_at', 'category_id', 'user_id', 'gambar']);
     }
 
 

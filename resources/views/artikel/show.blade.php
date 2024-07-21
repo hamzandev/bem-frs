@@ -3,7 +3,7 @@
 
         <div class="flex md:flex-row flex-col gap-8">
             <article
-                class="lg:w-2/3 prose md:prose-lg 2xl:prose-xl bg-white rounded-xl md:p-10 mt-10 md:mt-0 md:max-h-[170vh] md:overflow-y-auto">
+                class="md:w-8/12 prose md:prose-xl bg-white rounded-xl md:p-10 mt-10 md:mt-0 md:max-h-[170vh] md:overflow-y-auto">
                 <h1>{{ $artikel?->judul ?? 'Tidak Ditemukan' }}</h1>
                 <x-artikel.artikel-info
                     user="{{ $artikel?->user->name }}"
@@ -20,7 +20,7 @@
                 {{ Illuminate\Mail\Markdown::parse($artikel->konten) }}
             </article>
             {{-- aside artikel --}}
-            <aside class="md:w-1/3 bg-transparent py-5">
+            <aside class="md:w-4/12 bg-transparent py-5">
                 <x-page-heading>Artikel Lainnya</x-page-heading>
                 <div class="grid gap-8 py-5">
                     @foreach ($latestArtikels as $item)

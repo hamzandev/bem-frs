@@ -1,6 +1,6 @@
 <!-- Item 1 -->
 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-    <img src="{{ $artikel->src ? asset('storage/' . $artikel->src) : asset('storage/default.png') }}"
+    <img src="{{ $artikel->gambar ? asset('storage/' . $artikel->gambar) : asset('storage/default.png') }}"
         class="relative block w-full object-cover h-full" alt="...">
     <div
         class="absolute h-full flex flex-col md:justify-end justify-center lg:gap-5 gap-3 bottom-0 px-6 lg:pb-24 pb-20 bg-gradient-to-t from-gray-900 to-transparent inset-x-0 lg:items-center">

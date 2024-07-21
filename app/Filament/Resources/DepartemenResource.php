@@ -3,21 +3,17 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\DepartemenResource\Pages;
-use App\Filament\Resources\DepartemenResource\RelationManagers;
 use App\Filament\Resources\DepartemenResource\RelationManagers\PengurusRelationManager;
 use App\Models\Departemen;
-use Filament\Forms;
-use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class DepartemenResource extends Resource
 {
@@ -46,8 +42,8 @@ class DepartemenResource extends Resource
                     Select::make('kepala_departemen')->relationship('pengurus', 'nama')
                         ->required()->unique('departemens', 'kepala_departemen')
                         ->label('Kepala Departemen'),
-                    MarkdownEditor::make('detail')->columnSpan(2),
-                ])->columns(2)->columnSpan(10),
+                    Textarea::make('detail')->rows(7)->columnSpan(2),
+                ])->columns(2),
             ])->columns(12);
     }
 
@@ -84,8 +80,8 @@ class DepartemenResource extends Resource
     {
         return [
             'index' => Pages\ListDepartemens::route('/'),
-            'create' => Pages\CreateDepartemen::route('/create'),
-            'edit' => Pages\EditDepartemen::route('/{record}/edit'),
+            // 'create' => Pages\CreateDepartemen::route('/create'),
+            // 'edit' => Pages\EditDepartemen::route('/{record}/edit'),
         ];
     }
 }

@@ -3,21 +3,16 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\BidangResource\Pages;
-use App\Filament\Resources\BidangResource\RelationManagers;
 use App\Models\Bidang;
-use Filament\Forms;
-use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class BidangResource extends Resource
 {
@@ -39,7 +34,7 @@ class BidangResource extends Resource
                     Select::make('kepala_bidang')
                         ->label('Kepala Bidang')
                         ->relationship('pengurus', 'nama')->required(),
-                    RichEditor::make('detail')->columnSpan(2)
+                    Textarea::make('detail')->columnSpan(2)
                 ])->columns(2),
             ]);
     }
@@ -75,8 +70,8 @@ class BidangResource extends Resource
     {
         return [
             'index' => Pages\ListBidangs::route('/'),
-            'create' => Pages\CreateBidang::route('/create'),
-            'edit' => Pages\EditBidang::route('/{record}/edit'),
+            // 'create' => Pages\CreateBidang::route('/create'),
+            // 'edit' => Pages\EditBidang::route('/{record}/edit'),
         ];
     }
 }

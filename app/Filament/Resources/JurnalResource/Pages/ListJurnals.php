@@ -16,4 +16,5 @@ class ListJurnals extends ListRecords
             Actions\CreateAction::make(),
         ];
     }
+
 }

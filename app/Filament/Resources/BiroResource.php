@@ -7,6 +7,7 @@ use App\Filament\Resources\BiroResource\RelationManagers;
 use App\Models\Biro;
 use Filament\Forms;
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -14,8 +15,6 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class BiroResource extends Resource
 {
@@ -33,8 +32,13 @@ class BiroResource extends Resource
             ->schema([
                 Section::make('Informasi Biro')->schema([
                     TextInput::make('biro'),
-                    Textarea::make('detail'),
-                ])
+                    Select::make('kepala_biro')
+                        ->label('Kepala Biro')
+                        ->relationship('pengurus', 'nama')->required(),
+                    Textarea::make('detail')
+                        ->rows(7)
+                        ->columnSpan(2),
+                ])->columns(2)
             ]);
     }
 
