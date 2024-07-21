@@ -15,7 +15,7 @@ Route::get('/about', fn () => view('about'))->name('about');
 Route::get('/kontak', fn () => view('kontak'))->name('kontak');
 
 Route::get('/aspirasi', [AspirasiController::class, 'index'] )->name('aspirasi');
-Route::post('/aspirasi', [AspirasiController::class, 'store'] )->name('aspirasi.store');
+Route::post('/aspirasi', [AspirasiController::class, 'store'] )->name('aspirasi.simpan');
 
 Route::resource('/artikel', ArtikelController::class)->only(['index', 'show']);
 

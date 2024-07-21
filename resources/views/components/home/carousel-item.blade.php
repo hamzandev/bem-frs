@@ -4,7 +4,9 @@
         class="relative block w-full object-cover h-full" alt="...">
     <div
         class="absolute h-full flex flex-col md:justify-end justify-center lg:gap-5 gap-3 bottom-0 px-6 lg:pb-24 pb-20 bg-gradient-to-t from-gray-900 to-transparent inset-x-0 lg:items-center">
-        <x-artikel.category-badge category="{{ $artikel->category->category }}"></x-artikel.category-badge>
+        @if($artikel->category)
+            <x-artikel.category-badge category="{{ $artikel->category->category }}"></x-artikel.category-badge>
+        @endif
         <h1 class="text-white md:text-4xl text-2xl font-extrabold md:text-center line-clamp-3 lg:mx-auto lg:w-3/4">
             <a href="{{ route('artikel.show', $artikel->id) }}" class="hover:underline">
                 {{ $artikel->judul }}
