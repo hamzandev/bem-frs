@@ -32,7 +32,7 @@ class Artikel extends Model
         return self::where('is_published', 1)
             ->latest('published_at')
             ->take($n)
-            ->get(['id', 'judul', 'published_at', 'category_id', 'user_id']);
+            ->get(['id', 'judul', 'published_at', 'category_id', 'user_id', 'gambar']);
     }
 
 
@@ -49,19 +49,6 @@ class Artikel extends Model
             ->latest()
             ->paginate($limit);
     }
-
-
-
-    // public static function getAllLatest(int $limit = 10, bool $latest = true): \Illuminate\Pagination\LengthAwarePaginator
-    // {
-    //     $query = self::query()
-    //         ->where('is_published', 1)
-    //         ->with(['category', 'user']);
-    //     if ($latest) {
-    //         return $query->latest()->paginate($limit);
-    //     }
-    //     return $query->oldest()->paginate($limit);
-    // }
 
     public static function getAllByCategory(int $categoryId, int $limit = 10): \Illuminate\Pagination\LengthAwarePaginator
     {
@@ -86,7 +73,7 @@ class Artikel extends Model
 
     public static function getOtherArticles(String|int $id, int $limit = 5, $latest = false)
     {
-        return self::select('id', 'judul', 'published_at', 'category_id', 'user_id')
+        return self::select('id', 'judul', 'published_at', 'category_id', 'user_id', 'gambar')
             ->with(['category:id,category', 'user:id,name'])
             ->where('id', '!=', $id)
             ->when($latest, function ($query) {

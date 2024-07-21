@@ -5,7 +5,7 @@
         <!-- Carousel wrapper -->
         <div class="relative lg:h-[73vh] h-[70vh] overflow-hidden">
             @foreach ($artikels as $artikel)
-                <x-home.carousel-item></x-home.carousel-item>
+                <x-home.carousel-item :artikel="$artikel"></x-home.carousel-item>
             @endforeach
         </div>
         <!-- Slider indicators -->

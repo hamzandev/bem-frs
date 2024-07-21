@@ -2,8 +2,10 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\BidangResource\Pages;
-use App\Models\Bidang;
+use App\Filament\Resources\BiroResource\Pages;
+use App\Filament\Resources\BiroResource\RelationManagers;
+use App\Models\Biro;
+use Filament\Forms;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -14,43 +16,46 @@ use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class BidangResource extends Resource
+class BiroResource extends Resource
 {
-    protected static ?string $model = Bidang::class;
-
+    protected static ?string $model = Biro::class;
     protected static ?string $navigationGroup = 'Struktural';
 
-    protected static ?string $navigationLabel = 'Bidang';
+    protected static ?string $navigationLabel = 'Biro';
+    protected static ?string $pluralModelLabel = 'data biro';
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Section::make('Informasi Bidang')->schema([
-                    TextInput::make('bidang')
-                        ->label('Nama Bidang')
-                        ->required()->unique('bidangs', 'bidang'),
-                    Select::make('kepala_bidang')
-                        ->label('Kepala Bidang')
+                Section::make('Informasi Biro')->schema([
+                    TextInput::make('biro'),
+                    Select::make('kepala_biro')
+                        ->label('Kepala Biro')
                         ->relationship('pengurus', 'nama')->required(),
-                    Textarea::make('detail')->columnSpan(2)
-                ])->columns(2),
+                    Textarea::make('detail')
+                        ->rows(7)
+                        ->columnSpan(2),
+                ])->columns(2)
             ]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
+            ->searchable()
             ->columns([
-                TextColumn::make('bidang')->label('Nama Bidang'),
-                TextColumn::make('pengurus.nama')->label('Kepala Bidang'),
+                TextColumn::make('biro')->label('Nama Biro')->searchable(),
+                TextColumn::make('detail')->default('-')->label('Nama Biro')->searchable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -69,9 +74,9 @@ class BidangResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListBidangs::route('/'),
-            // 'create' => Pages\CreateBidang::route('/create'),
-            // 'edit' => Pages\EditBidang::route('/{record}/edit'),
+            'index' => Pages\ListBiros::route('/'),
+            // 'create' => Pages\CreateBiro::route('/create'),
+            // 'edit' => Pages\EditBiro::route('/{record}/edit'),
         ];
     }
 }

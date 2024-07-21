@@ -1,4 +1,4 @@
-<form method="POST" class="space-y-6" action="{{ route('aspirasi.store') }}">
+<form method="POST" class="space-y-6" action="{{ route('aspirasi.simpan') }}">
     @csrf
     <div class="grid gap-3 lg:grid-cols-2">
         <div>

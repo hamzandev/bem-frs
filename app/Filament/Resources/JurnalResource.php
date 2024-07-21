@@ -3,15 +3,19 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\JurnalResource\Pages;
-use App\Filament\Resources\JurnalResource\RelationManagers;
 use App\Models\Jurnal;
-use Filament\Forms;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Infolists\Components\TextEntry;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class JurnalResource extends Resource
 {
@@ -27,15 +31,55 @@ class JurnalResource extends Resource
     {
         return $form
             ->schema([
-                //
-            ]);
+                Section::make('Informasi Jurnal')->schema([
+                    TextInput::make('judul')->required()->columnSpan(2),
+                    TextInput::make('penulis')->required(),
+                    DatePicker::make('tanggal_publish')->required(),
+                    Select::make('category_id')->relationship('category', 'category')->required(),
+                    Textarea::make('deskripsi')->required()->columnSpan(2),
+                ])->columns(2)->columnSpan(3),
+
+                Section::make('File Jurnal')->schema([
+                    FileUpload::make('file')->required(),
+                ])->columnSpan(2),
+            ])->columns(5);
     }
 
     public static function table(Table $table): Table
     {
         return $table
+            ->actions([
+                Tables\Actions\Action::make('Lihat')
+                    ->icon('heroicon-o-eye')
+                    // This is the important part!
+                    ->infolist([
+                        // Inside, we can treat this as any info list and add all the fields we want!
+                        Section::make('Informasi Pengirim')
+                            ->schema([
+                                TextEntry::make('judul'),
+                                TextEntry::make('penulis'),
+                                TextEntry::make('created_at')
+                                ->label('Dipublish Pada')->date(format: 'd M Y'),
+                                TextEntry::make('category.category')->label('Category')->badge(),
+                                TextEntry::make('file'),
+                                TextEntry::make('deskripsi'),
+                            ])
+                            ->columns(),
+                    ])->slideOver()->modalFooterActions(fn () => []),
+                Tables\Actions\DeleteAction::make(),
+            ])
+
             ->columns([
-                //
+                TextColumn::make('judul')->label('Judul Jurnal')
+                    ->limit(20)
+                    ->searchable(),
+                TextColumn::make('penulis')->label('Penulis')->searchable(),
+                TextColumn::make('category.category')->label('Category')->searchable(),
+                TextColumn::make('created_at')->label('Dikirim Pada')->date(format: 'd M Y'),
+                TextColumn::make('file')
+                    ->limit(20)
+                    ->label('File'),
+
             ])
             ->filters([
                 //
@@ -61,8 +105,6 @@ class JurnalResource extends Resource
     {
         return [
             'index' => Pages\ListJurnals::route('/'),
-            'create' => Pages\CreateJurnal::route('/create'),
-            'edit' => Pages\EditJurnal::route('/{record}/edit'),
         ];
     }
 }

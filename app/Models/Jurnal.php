@@ -10,7 +10,8 @@ class Jurnal extends Model
 {
     use HasFactory;
 
-    function Category() : BelongsTo {
+    protected $guarded = ['id'];
+    function category() : BelongsTo {
         return $this->belongsTo(Category::class);
     }
 }

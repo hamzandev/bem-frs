@@ -5,6 +5,7 @@
     <x-home.dekan></x-home.dekan>
     <x-home.ketua-bem></x-home.ketua-bem>
     <x-home.overview></x-home.overview>
+    <x-home.kontak></x-home.kontak>
     {{-- <div class="py-20 bg-white">
         <div class="container mx-auto">
             <div class="flex justify-between items-center mb-10">
