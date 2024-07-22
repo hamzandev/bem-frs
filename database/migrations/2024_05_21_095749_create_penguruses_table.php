@@ -15,10 +15,8 @@ return new class extends Migration
             $table->id()->autoIncrement();
             $table->string('nama');
             $table->string('nim')->unique();
-            $table->foreignId('jabatan_id')->constrained()->cascadeOnUpdate();
-            // ->nullOnDelete();
-            $table->foreignId('prodi_id')->constrained()->cascadeOnUpdate();
-            // ->nullOnDelete();
+            $table->foreignId('jabatan_id')->nullable()->constrained()->cascadeOnUpdate();
+            $table->foreignId('prodi_id')->nullable()->constrained()->cascadeOnUpdate();
             $table->string('foto')->nullable();
             $table->timestamps();
         });

@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\DepartemenResource\Pages;
 use App\Filament\Resources\DepartemenResource\RelationManagers\PengurusRelationManager;
+use App\Models\Bidang;
 use App\Models\Departemen;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
@@ -35,7 +36,9 @@ class DepartemenResource extends Resource
             ->schema([
                 Section::make('Informasi Departemen')->schema([
                     TextInput::make('departemen')
-                        ->required()->unique('departemens', 'departemen')
+                        ->required()->unique('departemens', 'departemen', ignorable: function($record) {
+                            return $record;
+                        })
                         ->columnSpan(2),
                     Select::make('bidang_id')->relationship('bidang', 'bidang')
                         ->required()->label('Pilih Bidang'),
@@ -50,13 +53,16 @@ class DepartemenResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+        ->searchable()
             ->columns([
-                TextColumn::make('departemen'),
-                TextColumn::make('bidang.bidang')->label('Bidang'),
-                TextColumn::make('pengurus.nama')->label('Kepala Departemen'),
+                TextColumn::make('departemen')->searchable()->sortable(),
+                TextColumn::make('bidang.bidang')->label('Bidang')->searchable()->sortable(),
+                TextColumn::make('pengurus.nama')->label('Kepala Departemen')->searchable(),
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('bidang.bidang')
+                    ->label('Bidang')
+                    ->relationship('bidang', 'bidang'),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

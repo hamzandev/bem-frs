@@ -3,10 +3,8 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ArtikelResource\Pages;
-use App\Filament\Resources\ArtikelResource\RelationManagers;
 use App\Models\Artikel;
 use Carbon\Carbon;
-use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\RichEditor;
@@ -18,26 +16,19 @@ use Filament\Forms\Form;
 use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
 
 
 class ArtikelResource extends Resource
 {
-    protected ?string $heading = 'Custom Page Heading';
-    protected ?string $subheading = 'Custom Page Subheading';
-    protected static ?string $title = 'Custom Page Title';
     protected static ?string $model = Artikel::class;
 
     protected static ?string $navigationGroup = 'Jurnalistik';
 
-    protected static ?string $navigationIcon = 'heroicon-o-folder';
+    protected static ?string $navigationIcon = 'heroicon-o-document-duplicate';
     protected static ?string $navigationLabel = 'Artikel';
 
     public static function form(Form $form): Form
@@ -108,7 +99,6 @@ class ArtikelResource extends Resource
                     ->icon('heroicon-o-eye')
                     ->iconButton(),
                 Tables\Actions\EditAction::make()->iconButton(),
-                    // ->url(fn (Model $record): string => static::getUrl('edit', ['record' => $record->slug])),
                 Tables\Actions\DeleteAction::make()->iconButton(),
             ])
             ->searchable()

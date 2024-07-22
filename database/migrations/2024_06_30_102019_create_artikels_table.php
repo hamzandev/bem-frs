@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('artikels', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->foreignId('category_id')->nullable()->constrained()->cascadeOnUpdate();
+            $table->foreignId('category_id')->nullable()->constrained()->cascadeOnUpdate()->nullOnDelete();
             $table->foreignId('user_id')->constrained()->cascadeOnUpdate();
             $table->string('judul');
             $table->string('slug');

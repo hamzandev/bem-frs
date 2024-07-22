@@ -40,7 +40,7 @@ class JurnalResource extends Resource
                 ])->columns(2)->columnSpan(3),
 
                 Section::make('File Jurnal')->schema([
-                    FileUpload::make('file')->required(),
+                    FileUpload::make('file')->required()->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])->label('File Jurnal'),
                 ])->columnSpan(2),
             ])->columns(5);
     }

@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string('bidang');
             // tersangka error dari Gemini
             $table->foreignId('kepala_bidang')
+                ->nullable()
                 ->constrained()->references('id')->on('penguruses')
+                ->nullOnDelete()
                 ->unique()->cascadeOnUpdate();
             $table->text('detail')->nullable();
             $table->timestamps();

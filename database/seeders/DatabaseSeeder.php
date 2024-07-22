@@ -51,7 +51,7 @@ class DatabaseSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'jabatan' => 'Anggota',
+                'jabatan' => 'Staff',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

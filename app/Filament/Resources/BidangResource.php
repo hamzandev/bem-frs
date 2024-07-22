@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\BidangResource\Pages;
+use App\Filament\Resources\BidangResource\RelationManagers\DepartemensRelationManager;
 use App\Models\Bidang;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
@@ -19,6 +20,8 @@ class BidangResource extends Resource
     protected static ?string $model = Bidang::class;
 
     protected static ?string $navigationGroup = 'Struktural';
+    protected static ?string $pluralModelLabel = 'Bidang';
+
 
     protected static ?string $navigationLabel = 'Bidang';
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
@@ -30,7 +33,9 @@ class BidangResource extends Resource
                 Section::make('Informasi Bidang')->schema([
                     TextInput::make('bidang')
                         ->label('Nama Bidang')
-                        ->required()->unique('bidangs', 'bidang'),
+                        ->required()->unique('bidangs', 'bidang', ignorable: function ($record) {
+                            return $record;
+                        }),
                     Select::make('kepala_bidang')
                         ->label('Kepala Bidang')
                         ->relationship('pengurus', 'nama')->required(),
@@ -45,6 +50,7 @@ class BidangResource extends Resource
             ->columns([
                 TextColumn::make('bidang')->label('Nama Bidang'),
                 TextColumn::make('pengurus.nama')->label('Kepala Bidang'),
+                TextColumn::make('detail')->label('Detail')->limit(32),
             ])
             ->filters([
                 //
@@ -62,7 +68,7 @@ class BidangResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            DepartemensRelationManager::class,
         ];
     }
 
@@ -71,7 +77,7 @@ class BidangResource extends Resource
         return [
             'index' => Pages\ListBidangs::route('/'),
             // 'create' => Pages\CreateBidang::route('/create'),
-            // 'edit' => Pages\EditBidang::route('/{record}/edit'),
+            'edit' => Pages\EditBidang::route('/{record}/edit'),
         ];
     }
 }

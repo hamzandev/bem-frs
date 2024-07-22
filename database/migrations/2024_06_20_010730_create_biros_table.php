@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('biro')->unique();
             $table->foreignId('kepala_biro')
+                ->nullable()
                 ->constrained()->references('id')->on('penguruses')
-                ->cascadeOnUpdate();
+                ->cascadeOnUpdate()->nullOnDelete();
             $table->text('detail')->nullable();
             $table->timestamps();
         });

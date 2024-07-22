@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id()->autoIncrement();
             $table->string('departemen');
             $table->foreignId('kepala_departemen')
+                ->nullable()
                 ->constrained()->references('id')->on('penguruses')
+                ->nullOnDelete()
                 ->cascadeOnUpdate();
             $table->foreignId('bidang_id')->constrained()->cascadeOnUpdate();
             $table->text('detail')->nullable();
