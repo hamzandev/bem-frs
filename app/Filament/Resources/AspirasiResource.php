@@ -25,7 +25,7 @@ class AspirasiResource extends Resource
 
     protected static ?string $pluralModelLabel = 'aspirasi';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-oval-left-ellipsis';
 
     public static function form(Form $form): Form
     {
@@ -60,9 +60,10 @@ class AspirasiResource extends Resource
                         Section::make('Informasi Pengirim')
                             ->schema([
                                 TextEntry::make('nama_mahasiswa'),
-                                TextEntry::make('telepon'),
+                                TextEntry::make('telepon')->default('-'),
                                 TextEntry::make('created_at')->label('Dikirim Pada')->date(format: 'd M Y'),
-                                TextEntry::make('aspirasis_category.category')->label('Category')->badge(),
+                                TextEntry::make('aspirasis_category.category')
+                                    ->label('Category')->badge()->default('Uncategorized'),
                             ])
                             ->columns(),
                         Section::make('Informasi Aspirasi')

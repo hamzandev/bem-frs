@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('pengurus_details', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            // $table->year('tahun_pengurus'); /* Karena sudah di-handle oleh periode di table Kabinet */
-            $table->foreignId('pengurus_id')->unique()->constrained()->cascadeOnUpdate();
-            $table->foreignId('kabinet_id')->constrained()->cascadeOnUpdate();
+            $table->foreignId('pengurus_id')->unique()
+                ->constrained()->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('kabinet_id')->nullable()
+                ->constrained()->cascadeOnUpdate()->cascadeOnDelete();
 
             $table->foreignId('departemen_id')->nullable()->constrained()->cascadeOnUpdate();
             $table->foreignId('biro_id')->nullable()->constrained()->cascadeOnUpdate();

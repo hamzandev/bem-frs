@@ -10,6 +10,10 @@ class Jabatan extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'jabatan'
+    ];
+
     function pengurus_details() : HasMany {
         return $this->hasMany(PengurusDetail::class);
     }

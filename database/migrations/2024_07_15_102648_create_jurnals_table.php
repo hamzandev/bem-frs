@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('penulis');
             $table->date('tanggal_publish');
             $table->string('file');
-            $table->foreignId('category_id')->constrained()->cascadeOnUpdate();
+            $table->foreignId('category_id')->nullable()->constrained()->cascadeOnUpdate()->nullOnDelete();
             $table->timestamps();
         });
     }

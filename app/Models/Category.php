@@ -10,15 +10,14 @@ class Category extends Model
 {
     use HasFactory;
     protected $guarded = [];
-    function aspirasis() : HasMany {
-        return $this->hasMany(Aspirasi::class);
-    }
+
     public function jurnals()
     {
         return $this->hasMany(Jurnal::class);
     }
 
-    function artikels() : HasMany {
+    function artikels()
+    {
         return $this->hasMany(Artikel::class);
     }
 }

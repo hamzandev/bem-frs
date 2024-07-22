@@ -44,6 +44,9 @@ class PengurusResource extends Resource
                     TextInput::make('nim')
                         ->columnSpan(2)
                         ->label('NIM')
+                        ->unique('penguruses', 'nim', ignorable: function($record) {
+                            return $record;
+                        })
                         ->required()
                         ->numeric(),
                     Select::make('prodi_id')
@@ -58,7 +61,8 @@ class PengurusResource extends Resource
                     ->columnSpan(2),
                 Section::make('Foto')->schema([
                     FileUpload::make('foto')->nullable(),
-                ])->columnSpan(1)
+                ])->columnSpan(1),
+
             ])->columns(3);
     }
 
@@ -66,10 +70,8 @@ class PengurusResource extends Resource
     {
         return $table
             ->columns([
-                // ImageColumn::make('foto'),
-                // prodi, angkatan, gender
-                TextColumn::make('nama')->sortable(),
-                TextColumn::make('nim')->sortable(),
+                TextColumn::make('nama')->sortable()->searchable(),
+                TextColumn::make('nim')->sortable()->searchable(),
             ])
             ->searchable()
             ->filters([
@@ -98,7 +100,7 @@ class PengurusResource extends Resource
         return [
             'index' => Pages\ListPenguruses::route('/'),
             'create' => Pages\CreatePengurus::route('/create'),
-            'edit' => Pages\EditPengurus::route('/{record}/edit'),
+            // 'edit' => Pages\EditPengurus::route('/{record}/edit'),
         ];
     }
 }
