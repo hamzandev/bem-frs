@@ -1,12 +1,12 @@
 <section id="visi-misi" class="py-32 bg-white lg:px-10 rounded-b-2xl shadow-sm">
     <header id="heading" class="lg:flex grid lg:gap-10">
-        <div id="ilustration" class="lg:w-1/3 w-1/2 lg:mx-0 mx-auto">
+        <div id="ilustration" class="lg:w-1/4 w-1/2 lg:mx-0 mx-auto">
             <img src="../img/Logo Kabinet.png" alt="ilustration" class="mx-auto lg:mx-0 w-full h-auto">
         </div>
 
         <div id="typography" class="lg:w-2/3 pt-5 lg:flex justify-center flex-col md:text-start text-center">
             <h1 class="md:text-5xl text-3xl mb-3 lg:w-[80%] font-extrabold">Visi & Misi BEM-FRS</h1>
-            <p class="md:text-xl text-lg text-gray-400">
+            <p class="md:text-xl text-lg text-gray-500">
                 Pada bagian ini, kamu akan temukan Visi dan juga Misi terdepan Badan Eksekutif Mahasiswa Fakultas
                 Rekayasa Sistem.
             </p>
@@ -18,19 +18,19 @@
         <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab"
             data-tabs-toggle="#default-tab-content" role="tablist">
             <li class="me-2" role="presentation">
-                <button class="inline-block text-3xl font-bold p-4 border-b-2 rounded-t-lg" id="visi-tab"
+                <button class="inline-block md:text-3xl font-bold p-4 border-b-2 rounded-t-lg" id="visi-tab"
                     data-tabs-target="#visi" type="button" role="tab" aria-controls="visi"
                     aria-selected="false">Visi</button>
             </li>
             <li class="me-2" role="presentation">
                 <button
-                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 text-3xl font-bold"
+                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 md:text-3xl font-bold"
                     id="misi-tab" data-tabs-target="#misi" type="button" role="tab" aria-controls="misi"
                     aria-selected="false">Misi</button>
             </li>
             <li class="me-2" role="presentation">
                 <button
-                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 text-3xl font-bold"
+                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 md:text-3xl font-bold"
                     id="program-unggulan-tab" data-tabs-target="#program-unggulan" type="button" role="tab"
                     aria-controls="program-unggulan" aria-selected="false">Program Unggulan</button>
             </li>
