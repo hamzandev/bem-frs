@@ -1,0 +1,434 @@
+{
+  "formatur": [
+    {
+      "jabatan": "Ketua",
+      "nama": "Widarman",
+      "prodi": "Informatika",
+      "angkatan": "2021",
+      "image": ""
+    },
+    {
+      "jabatan": "Wakil Ketua",
+      "nama": "Irfan Fajar Diansyah",
+      "prodi": "Teknik Elektro",
+      "angkatan": "2021",
+      "image": ""
+    },
+    {
+      "jabatan": "Sekretaris",
+      "nama": "Rahmawatillawati Karim",
+      "prodi": "Informatika",
+      "angkatan": "2021",
+      "image": ""
+    },
+    {
+      "jabatan": "Bendahara",
+      "nama": "Lilis S Amrullah",
+      "prodi": "Teknik Elektro",
+      "angkatan": "2021",
+      "image": ""
+    }
+  ],
+
+  "biro-medinfo": [
+    {
+      "jabatan": "Kepala Biro",
+      "nama": "Titha Artha Tandahyu",
+      "prodi": "Informatika",
+      "angkatan": "2022",
+      "image": ""
+    },
+    {
+      "jabatan": "Staff",
+      "nama": "Sherly Novia",
+      "prodi": "Informatika",
+      "angkatan": "2023",
+      "image": ""
+    },
+    {
+      "jabatan": "Staff",
+      "nama": "Rudi Anggara",
+      "prodi": "Informatika",
+      "angkatan": "2022",
+      "image": ""
+    }
+  ],
+  
+  "bjmo": [
+    {
+      "jabatan": "Kepala Biro",
+      "nama": "Fachrurrozy A. S. Madilao",
+      "prodi": "Informatika",
+      "angkatan": "2021",
+      "image": ""
+    },
+    {
+      "jabatan": "Staff",
+      "nama": "Julianingsih",
+      "prodi": "Informatika",
+      "angkatan": "2021",
+      "image": ""
+    }
+  ],
+  
+  "biro-ekraf": [
+    {
+      "jabatan": "Kepala Biro",
+      "nama": "Santi Bulan",
+      "prodi": "Informatika",
+      "angkatan": "2021",
+      "image": ""
+    },
+    {
+      "jabatan": "Staff",
+      "nama": "Jihan Fadilah",
+      "prodi": "Informatika",
+      "angkatan": "2021",
+      "image": ""
+    },
+    {
+      "jabatan": "Staff",
+      "nama": "Andi Aprizal",
+      "prodi": "Informatika",
+      "angkatan": "2021",
+      "image": ""
+    },
+    {
+      "jabatan": "Staff",
+      "nama": "Maulana Bela S",
+      "prodi": "Informatika",
+      "angkatan": "2021",
+      "image": ""
+    }
+  ],
+  
+  "bidang-sospol": {
+    "kepala-bidang": {
+      "nama": "Sapri Daulany",
+      "prodi": "Teknik Elektro",
+      "angkatan": "2021",
+      "image": ""
+    },
+    "departemen-advokastrat": [
+      {
+        "jabatan": "Kepala Departemen",
+        "nama": "Muhammad Sadam",
+        "prodi": "Teknik Industri",
+        "angkatan": "2021",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Ikbal",
+        "prodi": "Teknik Sistem Energi",
+        "angkatan": "2023",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Nur Fitria Ningsih",
+        "prodi": "Teknik Elektro",
+        "angkatan": "2021",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Nandi Saputra",
+        "prodi": "Teknik Mesin",
+        "angkatan": "2023",
+        "image": ""
+      }
+    ],
+
+    "departemen-penmas" : [
+      {
+        "jabatan": "Kepala Departemen",
+        "nama": "Nanda Pasolingi",
+        "prodi": "Informatika",
+        "angkatan": "2022",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Idhar",
+        "prodi": "Informatika",
+        "angkatan": "2021",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Fatimah Damayanti",
+        "prodi": "-",
+        "angkatan": "-",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Reny Wahyuni",
+        "prodi": "-",
+        "angkatan": "-",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Hasriani",
+        "prodi": "Informatika",
+        "angkatan": "2023",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Suan Seplara",
+        "prodi": "Informatika",
+        "angkatan": "-",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Kinanti Ayuningtias",
+        "prodi": "Informatika",
+        "angkatan": "2023",
+        "image": ""
+      }
+    ],
+
+    "departemen-relasi": [
+      {
+        "jabatan": "Kepala Departemen",
+        "nama": "Ananda Inggadisah",
+        "prodi": "-",
+        "angkatan": "-",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Bayu Pranata",
+        "prodi": "-",
+        "angkatan": "-",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Maulana Yusuf",
+        "prodi": "Informatika",
+        "angkatan": "2022",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Basri",
+        "prodi": "-",
+        "angkatan": "-",
+        "image": ""
+      }
+    ]
+  },
+
+  "bidang-penghas": {
+    "kepala-bidang": {
+      "nama": "Putry Chaerunnisa M",
+      "prodi": "-",
+      "angkatan": "-",
+      "image": ""
+    },
+
+    "departemen-psdm": [
+      {
+        "jabatan": "Kepala Departemen",
+        "nama": "Detha Putri Saifunnida",
+        "prodi": "Informatika",
+        "angkatan": "2022",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Oby Rizki R",
+        "prodi": "-",
+        "angkatan": "-",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Dwi Maryani",
+        "prodi": "Informatika",
+        "angkatan": "2022",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Sukarti",
+        "prodi": "Informatika",
+        "angkatan": "2022",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Hikmah S",
+        "prodi": "-",
+        "angkatan": "-",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Magfiratul J",
+        "prodi": "Informatika",
+        "angkatan": "2022",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Aditya Rizaldy",
+        "prodi": "Informatika",
+        "angkatan": "-",
+        "image": ""
+      }
+    ],
+
+    "departemen-kekeluargaan": [
+      {
+        "jabatan": "Kepala Departemen",
+        "nama": "Wahyu Librian Saputra",
+        "prodi": "-",
+        "angkatan": "-",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Zaitun",
+        "prodi": "Informatika",
+        "angkatan": "2022",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Marliana",
+        "prodi": "-",
+        "angkatan": "-",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Nilam",
+        "prodi": "Informatika",
+        "angkatan": "2022",
+        "image": ""
+      }
+    ],
+
+    "departemen-pemberdayaan-perempuan": [
+      {
+        "jabatan": "Kepala Departemen",
+        "nama": "Maemun Haniati",
+        "prodi": "Informatika",
+        "angkatan": "2022",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Riska",
+        "prodi": "-",
+        "angkatan": "-",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Nur Fauziah",
+        "prodi": "Informatika",
+        "angkatan": "2022",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Rizka Margariatul J",
+        "prodi": "Informatika",
+        "angkatan": "2022",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Dinar Riyati",
+        "prodi": "Informatika",
+        "angkatan": "2022",
+        "image": ""
+      }
+    ]
+  },
+
+  "bidang-ristek": {
+    "kepala-bidang": {
+      "nama": "Sahri Dian Suandy",
+      "prodi": "Teknik Elektro",
+      "angkatan": "2021",
+      "image": ""
+    },
+
+    "departemen-inovristek": [
+      {
+        "jabatan": "Kepala Departemen",
+        "nama": "Bintang",
+        "prodi": "Informatika",
+        "angkatan": "2022",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Khabirul Eza Al Qodri",
+        "prodi": "Informatika",
+        "angkatan": "2023",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Dina Mayada",
+        "prodi": "Informatika",
+        "angkatan": "2022",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Devi Indriani",
+        "prodi": "Informatika",
+        "angkatan": "2022",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Hamzan Wahyudi",
+        "prodi": "Informatika",
+        "angkatan": "2023",
+        "image": ""
+      }
+    ],
+
+    "departemen-pendidikan-teknologi": [
+      {
+        "jabatan": "Kepala Departemen",
+        "nama": "Rizki Nurhafizh Achmad",
+        "prodi": "Informatika",
+        "angkatan": "2021",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Radit Eka S",
+        "prodi": "-",
+        "angkatan": "-",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Wahidah Januarti",
+        "prodi": "-",
+        "angkatan": "-",
+        "image": ""
+      },
+      {
+        "jabatan": "Staff",
+        "nama": "Yofi Syafrudin",
+        "prodi": "-",
+        "angkatan": "-",
+        "image": ""
+      }
+    ]
+  }
+}

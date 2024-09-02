@@ -19,7 +19,7 @@
     <div class="flex space-x-10 animate-loop-scroll group-hover:paused ">
         @foreach ($images as $i => $image)
             <div class="w-32 h-32 aspect-square" id="img-wrapper-{{ $i + 1 }}">
-                <img loading="lazy" src="{{ $image['src'] }}" class="max-w-none w-full h-full grayscale object-cover {{ in_array($image['alt'], ['Astro', 'HMTI', 'Costing']) ? 'p-[12px]' : ''  }}"
+                <img loading="lazy" src="{{ $image['src'] }}" class="max-w-none w-full h-full  object-cover {{ in_array($image['alt'], ['Astro', 'HMTI', 'Costing']) ? 'p-[12px]' : ''  }}"
                     alt="{{ $image['alt'] }}" />
             </div>
         @endforeach
@@ -27,7 +27,7 @@
     <div class="flex space-x-10 animate-loop-scroll group-hover:paused" aria-hidden="true">
         @foreach ($images as $i => $image)
             <div class="w-32 h-32 aspect-square" id="img-wrapper-{{ $i + 1 }}">
-                <img loading="lazy" src="{{ $image['src'] }}" class="max-w-none w-full h-full grayscale object-cover {{ in_array($image['alt'], ['Astro', 'HMTI', 'Costing']) ? 'p-[14px]' : ''  }}"
+                <img loading="lazy" src="{{ $image['src'] }}" class="max-w-none w-full h-full  object-cover {{ in_array($image['alt'], ['Astro', 'HMTI', 'Costing']) ? 'p-[14px]' : ''  }}"
                     alt="{{ $image['alt'] }}" />
             </div>
         @endforeach

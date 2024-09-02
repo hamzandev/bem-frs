@@ -14,47 +14,36 @@
             class="my-10 h-[80vh] shadow w-full bg-gray-200 flex items-center justify-center rounded-2xl md:overflow-hidden overflow-x-scroll">
             <img src="{{ asset('img/struktural.png') }}" alt="strukural-bem" class="md:w-full md:h-full md:object-cover">
         </div>
-        {{-- formatur --}}
-        <div class="spacepy-5 py-10">
-            <h4 class="text-2xl px-3 border-s-4 border-s-blue-500 font-bold">Formatur</h4>
-            <div class="grid lg:grid-cols-4 gap-8 py-10">
-                @php
-                    $formatur = ['Ketua', 'Wakil Ketua', 'Sekretaris', 'Bendahara'];
-                @endphp
-                @foreach ($formatur as $i => $item)
-                    <x-about.pengurus-card nama="Person {{ $i + 1 }}"
-                        jabatan="{{ $item }}"></x-about.pengurus-card>
-                @endforeach
-            </div>
+
+        <div class="my-5 flex flex-col gap-2 py-3 border-b-2 md:text-start text-center">
+            <h3 class="text-2xl font-bold">
+                Kabinet <span class="text-blue-500">Aksi Kolaborasi</span>
+            </h3>
+            <p class="text-gray-500">
+                Struktur Badan Eksekutif Mahasiswa Fakultas Rekayasa Sistem Periode 2024 - 2025.
+            </p>
         </div>
 
-        {{-- Biro --}}
-        <div class="spacepy-5 py-10">
-            <h4 class="text-2xl px-3 border-s-4 border-s-blue-500 font-bold">Biro Ekonomi Kreatif</h4>
-            <div class="grid lg:grid-cols-4 gap-8 py-10">
-                @php
-                    $formatur = ['Ketua', 'Wakil Ketua', 'Sekretaris', 'Bendahara'];
-                @endphp
-                @foreach ($formatur as $i => $item)
-                    <x-about.pengurus-card nama="Person {{ $i + 1 }}"
-                        jabatan="{{ $item }}"></x-about.pengurus-card>
-                @endforeach
-            </div>
-        </div>
+       {{-- Formatur --}}
+       <x-about.struktural.formatur></x-about.struktural.formatur>
 
-        {{-- Bidang --}}
-        <div class="spacepy-5 py-10">
-            <h4 class="text-2xl px-3 border-s-4 border-s-blue-500 font-bold">Bidang Riset & Teknologi</h4>
-            <div class="grid lg:grid-cols-4 gap-8 py-10">
-                @php
-                    $formatur = ['Ketua', 'Wakil Ketua', 'Sekretaris', 'Bendahara'];
-                @endphp
-                @foreach ($formatur as $i => $item)
-                    <x-about.pengurus-card nama="Person {{ $i + 1 }}"
-                        jabatan="{{ $item }}"></x-about.pengurus-card>
-                @endforeach
-            </div>
-        </div>
+       {{-- Biro Medinfo --}}
+       <x-about.struktural.biro-medinfo></x-about.struktural.biro-medinfo>
+
+       {{-- Biro BJMO --}}
+       <x-about.struktural.biro-bjmo></x-about.struktural.biro-bjmo>
+
+       {{-- Biro Ekraf --}}
+       <x-about.struktural.biro-ekraf></x-about.struktural.biro-ekraf>
+
+       {{-- Bidang Ristek --}}
+       <x-about.struktural.bidang-ristek></x-about.struktural.bidang-ristek>
+
+       {{-- Bidang Penghas --}}
+       <x-about.struktural.bidang-penghas></x-about.struktural.bidang-penghas>
+
+       {{-- Bidang Sospol --}}
+       <x-about.struktural.bidang-sospol></x-about.struktural.bidang-sospol>
 
     </div>
 </section>
