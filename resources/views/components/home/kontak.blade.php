@@ -1,10 +1,8 @@
-<div class="container mx-auto flex gap-5 items-start md:flex-row flex-col-reverse md:px-0 px-5">
-
-
+<div class="container flex flex-col-reverse gap-5 px-5 mx-auto md:items-start md:flex-row md:px-0">
    <x-home.socials-card></x-home.socials-card>
 
 
-    <form method="POST" class="space-y-6 md:w-8/12 p-6 bg-white border border-gray-200 rounded-lg shadow">
+    <form method="POST" class="p-6 space-y-6 bg-white border border-gray-200 rounded-lg shadow md:w-8/12">
         <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900">
             Berikan kami saran dan kritik
         </h5>

@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body style="font-family: 'Space Grotesk', sans-serif">
     <x-navbar></x-navbar>
     <main class="py-16 bg-gray-50">
         {{ $slot }}

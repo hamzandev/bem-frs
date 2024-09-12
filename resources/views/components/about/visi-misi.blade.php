@@ -14,7 +14,7 @@
     </header>
 
     {{-- Tabs --}}
-    <div class="mb-4 border-b border-gray-200 lg:mt-10 mt-5 dark:border-gray-700">
+    <div class="mb-4 border-b border-gray-200 lg:mt-10 mt-5">
         <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab"
             data-tabs-toggle="#default-tab-content" role="tablist">
             <li class="me-2" role="presentation">
@@ -24,13 +24,13 @@
             </li>
             <li class="me-2" role="presentation">
                 <button
-                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 md:text-3xl font-bold"
+                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 md:text-3xl font-bold"
                     id="misi-tab" data-tabs-target="#misi" type="button" role="tab" aria-controls="misi"
                     aria-selected="false">Misi</button>
             </li>
             <li class="me-2" role="presentation">
                 <button
-                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 md:text-3xl font-bold"
+                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 md:text-3xl font-bold"
                     id="program-unggulan-tab" data-tabs-target="#program-unggulan" type="button" role="tab"
                     aria-controls="program-unggulan" aria-selected="false">Program Unggulan</button>
             </li>
@@ -38,60 +38,60 @@
     </div>
 
     <div id="default-tab-content">
-        <div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 grid lg:grid-cols-1 gap-5" id="visi" role="tabpanel"
+        <div class="p-4 rounded-lg bg-gray-50 grid lg:grid-cols-1 gap-5" id="visi" role="tabpanel"
             aria-labelledby="visi-tab">
             {{-- Card --}}
             <div class="block max-w-full p-7 bg-white border border-gray-200 rounded-lg shadow text-left">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                     Menjadikan BEM FRS sebagai wadah Kolaborasi Berdasarkan Kultur dan Budaya untuk Mahasiswa FRS di
                     Bidang Teknologi agar terwujudnya Mahasiswa yang berintegritas, Kritis, dan Inovatif.
                 </h5>
             </div>
         </div>
 
-        <div class="grid lg:grid-cols-3 gap-5 p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="misi" role="tabpanel"
+        <div class="grid lg:grid-cols-3 gap-5 p-4 rounded-lg bg-gray-50" id="misi" role="tabpanel"
             aria-labelledby="misi-tab">
             {{-- Card --}}
             <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow text-left">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                     Membangun Kerja Sama Yang Harmonis Antara Lembaga Mahasiswa
                 </h5>
             </div>
             {{-- Card --}}
             <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow text-left">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                     Mengadvokasi Kebutuhan Akademik, Minat dan Bakat Mahasiswa FRS
                 </h5>
             </div>
             {{-- Card --}}
             <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow text-left">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                     Mengakselerasi Sumber Daya Mahasiswa Agar Membangung Jiwa Kritis dan Sosial
                 </h5>
             </div>
         </div>
 
-        <div class="grid lg:grid-cols-3 gap-5 p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="program-unggulan"
+        <div class="grid lg:grid-cols-3 gap-5 p-4 rounded-lg bg-gray-50" id="program-unggulan"
             role="tabpanel" aria-labelledby="program-unggulan-tab">
             {{-- Card --}}
             <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow text-left">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                     Kompetisi Riset & Teknologi
                 </h5>
-                <p class="text-gray-700 dark:text-gray-400">Kreasi adalah sebuah kompetisi riset dan inovasi yang
+                <p class="text-gray-700">Kreasi adalah sebuah kompetisi riset dan inovasi yang
                     bertujuan untuk mendorong orang-orang dalam mengembangkan ide-ide baru, solusi-solusi kreatif, atau
                     penemuan-penemuan di berbagai bidang seperti sains, teknologi, seni, atau bisnis.</p>
             </div>
             {{-- Card --}}
             <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow text-left">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                     Teropong FRS
                 </h5>
-                <p class="text-gray-700 dark:text-gray-400">
+                <p class="text-gray-700">
                     Podcast "Teropong FRS" menyajikan wawasan mendalam tentang Fakultas Rekayasa Sistem (FRS), dengan
                     fokus pada:
                 </p>
-                <ul class="list-disc list-inside text-gray-700 dark:text-gray-400 mt-4">
+                <ul class="list-disc list-inside text-gray-700 mt-4">
                     <li><strong>Pendidikan Teknologi</strong>: Metode dan inovasi terbaru dalam pengajaran teknologi.
                     </li>
                     <li><strong>Inovasi Riset Teknologi</strong>: Terobosan riset dan tren terkini dalam teknologi.</li>
@@ -104,17 +104,17 @@
                     <li><strong>Pengabdian Masyarakat</strong>: Proyek dan dampak pengabdian masyarakat oleh fakultas
                         dan mahasiswa.</li>
                 </ul>
-                <p class="text-gray-700 dark:text-gray-400 mt-4">
+                <p class="text-gray-700 mt-4">
                     Podcast ini menginspirasi dan mengedukasi pendengar mengenai berbagai aspek penting dalam rekayasa
                     sistem.
                 </p>
             </div>
             {{-- Card --}}
             <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow text-left">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                     Lingkungan Terbentuknya Silaturahmi dan Harmonisasi (LITERASI)
                 </h5>
-                <p class="text-gray-700 dark:text-gray-400">Lingkungan Terbentuknya Silaturahmi dan Harmonisasi
+                <p class="text-gray-700">Lingkungan Terbentuknya Silaturahmi dan Harmonisasi
                     (LITERASI) di Fakultas Rekayasa Sistem bertujuan untuk memperkuat hubungan dan menciptakan suasana
                     yang harmonis antara mahasiswa, dosen, staf, dan pihak rektorat. Program ini fokus pada peningkatan
                     komunikasi, kerja sama, dan integrasi melalui pertemuan rutin, acara sosial, dan program mentoring.

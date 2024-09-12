@@ -16,7 +16,7 @@
                 </div>
             </header>
             <div
-                class="lg:w-1/2 p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+                class="lg:w-1/2 p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8">
                 <x-aspirasi.form-aspirasi :categories="$categories"></x-aspirasi.form-aspirasi>
             </div>
 
